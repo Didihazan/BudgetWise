@@ -1,3 +1,15 @@
+
+@font-face {
+  font-family: 'VAG Rounded Bold';
+  src: url('./Fonts/VAG Rounded Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'VAG Rounded Bold', sans-serif;
+}
+
 header{
   /* כדי שנוכל לתת זיד אינדקס חובה לתת גם מאפיין
   פוזישן כלשהו, ואם אנחנו לא רוצים בטעות להשפיע על

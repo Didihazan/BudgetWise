@@ -17,8 +17,8 @@ serviceWorkerRegistration.register();
 // Request notification permission
 if ('Notification' in window) {
     Notification.requestPermission().then(permission => {
-        if (permission !== 'granted') {
-            alert('Notification permission is required for reminders to work!');
-        }
+        // if (permission !== 'granted') {
+        //     alert('Notification permission is required for reminders to work!');
+        // }
     });
 }
