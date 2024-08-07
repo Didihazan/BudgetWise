@@ -57,7 +57,11 @@
 }
 
 /* MAIN-IMG */
+.mobile-logo-container {
+    margin-left: 24px;
+}
 .mobile-logo-container img {
+    cursor: pointer;
     max-width: 100%; /* מבטיח שהתמונות לא יחרגו מגבולות המסך */
     height: auto; /* שומר על פרופורציות התמונה */
     display: block; /* מבטל מרווחים בלתי רצויים */
@@ -69,13 +73,38 @@
     animation: float 3s ease-in-out infinite;
 }
 
+/* הודעה להסברת "הפעל מצב נסיעה" */
+.activate-travel-mode-message {
+    display: none; /* מוסתר כברירת מחדל */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* אנימציית הצגת ההודעה */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /*Buttons*/
 .button-container {
     margin: 0 auto;
     padding: 0;
     display: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 85%;
 }
 
 .button-wrapper {

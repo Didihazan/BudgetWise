@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
-      <change afterPath="$PROJECT_DIR$/src/CSS/DesktopContent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CSS/MobileContent.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CSS/Star.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/DesktopContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/MobileContent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/Navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/Navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Star.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Order-pages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/MobileContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/MobileContent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MobileContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MobileContent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722855963104</updated>
       <workItem from="1722855964166" duration="1423000" />
-      <workItem from="1722878450142" duration="29701000" />
+      <workItem from="1722878450142" duration="30492000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -131,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722943571077</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update files">
+      <option name="closed" value="true" />
+      <created>1723026765812</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723026765812</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
