@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/MobileContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/MobileContent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MobileContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MobileContent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722855963104</updated>
       <workItem from="1722855964166" duration="1423000" />
-      <workItem from="1722878450142" duration="30492000" />
+      <workItem from="1722878450142" duration="31542000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -128,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723026765812</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update files">
+      <option name="closed" value="true" />
+      <created>1723027626449</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723027626449</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

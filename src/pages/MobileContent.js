@@ -3,7 +3,7 @@ import '../CSS/MobileContent.css';
 import logo from "../images/logo.png";
 import RandomStars from "../components/RandomStars";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCar, faClock, faPaperPlane, faStar} from "@fortawesome/free-solid-svg-icons";
+import {faCar, faClock, faCog, faInfoCircle, faPaperPlane, faStar} from "@fortawesome/free-solid-svg-icons";
 import { useLongPress } from 'use-long-press';
 
 
@@ -57,17 +57,16 @@ const MobileContent = () => {
                         </div>
                         <div className="button-wrapper">
                             <button className="round-button">
-                                <FontAwesomeIcon icon={faCar} flip="horizontal" size="2x" style={{color: "#59cfd3"}}
-                                                 className="round-icon"/>
+                                <FontAwesomeIcon icon={faInfoCircle} size="2x" style={{color: "#59cfd3",}} className="round-icon"/>
                             </button>
-                            <span className="button-label">רכב 2</span>
+                            <span className="button-label">הוראות שימוש</span>
                         </div>
                         <div className="button-wrapper">
                             <button className="round-button">
-                                <FontAwesomeIcon icon={faCar} flip="horizontal" size="2x" style={{color: "#59cfd3"}}
+                                <FontAwesomeIcon icon={faCog} flip="horizontal" size="2x" style={{color: "#59cfd3"}}
                                                  className="round-icon"/>
                             </button>
-                            <span className="button-label">רכב 3</span>
+                            <span className="button-label">התאמה אישית</span>
                         </div>
                     </div>
                 </div>
