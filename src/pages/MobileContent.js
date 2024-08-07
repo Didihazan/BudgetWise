@@ -4,28 +4,10 @@ import logo from "../images/logo.png";
 import RandomStars from "../components/RandomStars";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCar, faClock, faCog, faInfoCircle, faPaperPlane, faStar} from "@fortawesome/free-solid-svg-icons";
-import { useLongPress } from 'use-long-press';
+import ExplainMessage from "../components/ExplainMessage";
 
 
 const MobileContent = () => {
-    const handleLongPress = () => {
-        const messageElement = document.getElementById('travelModeMessage');
-        if (messageElement) {
-            messageElement.style.display = 'block';
-            setTimeout(() => {
-                messageElement.style.display = 'none';
-            }, 3000); // מציג את ההודעה למשך 3 שניות
-        }
-    };
-
-    const longPressEvent = useLongPress(handleLongPress, {
-        onCancel: () => {
-            const messageElement = document.getElementById('travelModeMessage');
-            if (messageElement) {
-                messageElement.style.display = 'none';
-            }
-        }
-    });
 
 
     return (
@@ -38,13 +20,13 @@ const MobileContent = () => {
                                      style={{color: "#ffffff"}} className="mobile-icon"/>
                     <FontAwesomeIcon icon={faPaperPlane }
                                      size="3x" style={{color: "#ffffff",}} className="mobile-icon"/>
-
                 </div>
                 <RandomStars numStars={6}/>
                 <FontAwesomeIcon icon={faStar} size="1x" style={{color: "#ffffff"}}/>
                 <div className="mobile-curved-background">
-                    <div className="mobile-logo-container" {...longPressEvent}>
+                    <div className="mobile-logo-container">
                         <img src={logo} alt="KidiSafe-logo" className="mobile-main-img"/>
+                        <ExplainMessage/>
                     </div>
                     <h1>KidiSafe</h1>
 
