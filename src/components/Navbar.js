@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import '../CSS/Navbar.css'
+import React, { useEffect, useState } from 'react';
+import '../CSS/Navbar.css';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -11,6 +10,13 @@ const Navbar = () => {
             setScrolled(true);
         } else {
             setScrolled(false);
+        }
+    };
+
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -25,9 +31,9 @@ const Navbar = () => {
         <div>
             <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
                 <ul className="nav-links">
-                    <li><Link to="/"> Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><button  onClick={() => scrollToSection('home')}>בית</button></li>
+                    <li><button onClick={() => scrollToSection('about')}>אודותינו</button></li>
+                    <li><button onClick={() => scrollToSection('contact')}>צור קשר</button></li>
                 </ul>
             </nav>
         </div>

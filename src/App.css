@@ -5,28 +5,15 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: 'Gan CLM Bold';
+  src: url('./Fonts/Gan CLM Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: 'VAG Rounded Bold', sans-serif;
 }
-
-header{
-  /* כדי שנוכל לתת זיד אינדקס חובה לתת גם מאפיין
-  פוזישן כלשהו, ואם אנחנו לא רוצים בטעות להשפיע על
-  האלמנט עם אבסלוט או פיקסד , אז נשים רילטיב */
-  position: relative;
-  z-index: 99;
-}
-
-header ul{
-  display: flex;
-  margin:0;
-  padding:0;
-  list-style: none;
-}
-
-header ul a{
-  color:black;
-  padding:0 12px;
-  text-decoration: none;
+*{
+  direction: rtl;
 }

@@ -1,0 +1,107 @@
+/* הגדרות כלליות למובייל */
+.mobile-container {
+    overflow-x: hidden;
+    background: linear-gradient(to top, #e5f0f1, #99efef, #2ea0a5);
+    margin: 0 auto;
+    max-width: 100%; /* מבטיח שהאלמנטים לא יחרגו מרוחב המסך */
+    box-sizing: border-box; /* מבטיח שהפדינג ייכלל ברוחב הכולל של האלמנט */
+}
+/*.mobile-container::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 10%;*/
+/*    left: 90%;*/
+/*    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent);*/
+/*    z-index: 1;*/
+/*    transform: rotate(45deg);*/
+/*    pointer-events: none;*/
+/*}*/
+
+.mobile-curved-background > h1 {
+    text-align: center;
+    z-index: 2;
+    font-family: VAG Rounded Bold, sans-serif;
+    color: #2d3748;
+    font-size: 4.5rem;
+    margin-top: 10px;
+}
+
+.mobile-home {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-curved-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80vh; /* גובה החלק הלבן, ניתן להתאים */
+    background-color: white;
+    border-top-left-radius: 90% 60%; /* שינוי לרוחב רחב מאוד */
+    border-top-right-radius: 90% 60%; /* שינוי לרוחב רחב מאוד */
+}
+
+/* ICONS */
+.mobile-icons-container {
+    margin-top: -10px; /* Add margin to ensure it is below the navbar */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-icon {
+    padding: 30px;
+}
+
+/* MAIN-IMG */
+.mobile-logo-container img {
+    max-width: 100%; /* מבטיח שהתמונות לא יחרגו מגבולות המסך */
+    height: auto; /* שומר על פרופורציות התמונה */
+    display: block; /* מבטל מרווחים בלתי רצויים */
+    margin: 0 auto; /* מרכז תמונות */
+}
+
+.mobile-main-img {
+    width: 19rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/*Buttons*/
+.button-container {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.round-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #59cfd3;
+    color: #59cfd3;
+    font-size: 18px;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+    margin-bottom: 5px; /* מרווח בין הכפתור לטקסט */
+}
+
+.round-button:hover {
+    transform: scale(1.1);
+}
+
+.button-label {
+    font-size: 14px;
+    color: #2d3748;
+    text-align: center;
+}
