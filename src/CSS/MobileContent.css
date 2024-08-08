@@ -58,19 +58,27 @@
 
 /* MAIN-IMG */
 .mobile-logo-container {
-    margin-left: 24px;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
+    display: table;
+    transition: box-shadow 0.3s ease;
 }
 .mobile-logo-container img {
     cursor: pointer;
-    max-width: 100%; /* מבטיח שהתמונות לא יחרגו מגבולות המסך */
-    height: auto; /* שומר על פרופורציות התמונה */
-    display: block; /* מבטל מרווחים בלתי רצויים */
-    margin: 0 auto; /* מרכז תמונות */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .mobile-main-img {
-    width: 19rem;
+    width: 20rem;
     animation: float 2s ease-in-out infinite;
+}
+.mobile-logo-container.active {
+    box-shadow: 0 0 10px 5px green; /* ערך זה שולט בעובי הזוהר */
+    border-radius: 50%; /* ערך זה שולט בעיגול המלא של התמונה */
 }
 
 /* הודעה להסברת "הפעל מצב נסיעה" */
@@ -114,8 +122,8 @@
 }
 
 .round-button {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border: 4px solid #59cfd3;
     color: #59cfd3;
@@ -133,6 +141,7 @@
     font-size: 14px;
     color: #2d3748;
     text-align: center;
+    max-width: 100px;
 }
 
 /*Setting*/
@@ -154,7 +163,7 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 80%;
+    /*width: 80%;*/
     max-width: 500px;
     position: relative;
 }
@@ -200,7 +209,16 @@
 .accordion-content {
     background-color: white;
 }
-
+.accordion-content select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 .accordion-title .faChevronDown, .accordion-title .faChevronUp {
     font-size: 1rem;
 }
@@ -208,12 +226,12 @@
 
 /*Dark mode*/
 .switch {
+    border-radius: 50%;
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
-
 .switch input {
     opacity: 0;
     width: 0;

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/EmergencyContacts.css';
+import translations from './translations';
 
 const EmergencyContacts = () => {
-    const [contacts, setContacts] = useState([{ name: '', phone: '' }, { name: '', phone: '' }]);
+    const [contacts, setContacts] = useState([{ name: '', phone: '' }]);
+    const [selectedLanguage] = useState(() => {
+        const savedLanguage = localStorage.getItem('language');
+        return savedLanguage || 'hebrew';
+    });
+    const t = translations[selectedLanguage];
 
     useEffect(() => {
-        // טעינת אנשי קשר מה-localStorage אם קיימים
         const savedContacts = JSON.parse(localStorage.getItem('emergencyContacts'));
         if (savedContacts) {
             setContacts(savedContacts);
@@ -19,36 +24,49 @@ const EmergencyContacts = () => {
     };
 
     const handleSaveContacts = () => {
-        // שמירת אנשי קשר ב-localStorage
         localStorage.setItem('emergencyContacts', JSON.stringify(contacts));
-        alert('אנשי הקשר נשמרו בהצלחה!');
+        alert(t.saveSuccessMessage);
+    };
+
+    const addContact = () => {
+        if (contacts.length < 2) {
+            setContacts([...contacts, { name: '', phone: '' }]);
+        }
     };
 
     return (
         <div className="emergency-contacts">
-            <h2>אנשי קשר לשעת חירום</h2>
             {contacts.map((contact, index) => (
-                <div key={index} className="contact-input">
+                <div key={index} className="contact-row">
                     <input
                         type="text"
                         value={contact.name}
                         onChange={(e) => handleContactChange(index, 'name', e.target.value)}
-                        placeholder="שם איש קשר"
+                        placeholder={t.contactNamePlaceholder}
+                        className="contact-input"
                     />
                     <input
                         type="tel"
                         value={contact.phone}
                         onChange={(e) => handleContactChange(index, 'phone', e.target.value)}
-                        placeholder="מספר טלפון"
+                        placeholder={t.contactPhonePlaceholder}
+                        className="contact-input"
                     />
                 </div>
             ))}
-            <button onClick={handleSaveContacts}>שמור</button>
+            {contacts.length < 2 && (
+                <button onClick={addContact} className="add-contact-button">
+                    {t.addContactButton}
+                </button>
+            )}
+            <button onClick={handleSaveContacts} className="save-contacts-button">
+                {t.saveContactsButton}
+            </button>
             <div className="contact-buttons">
                 {contacts.map((contact, index) => (
                     contact.name && contact.phone && (
-                        <button key={index} onClick={() => window.location.href = `tel:${contact.phone}`}>
-                            חייג ל{contact.name}
+                        <button key={index} onClick={() => window.location.href = `tel:${contact.phone}`} className="call-button">
+                            {`${t.callButton} ${contact.name}`}
                         </button>
                     )
                 ))}

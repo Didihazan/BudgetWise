@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-    faAngleDown,
     faCar,
     faClock,
     faCog,
@@ -10,12 +9,11 @@ import {
     faStar
 } from '@fortawesome/free-solid-svg-icons';
 import '../CSS/MobileContent.css';
-import logo from "../images/logo.png";
+// import logo from "../images/logo.png";
 import RandomStars from "../components/RandomStars";
 import ExplainMessage from "../components/ExplainMessage";
-import EmergencyContacts from "../components/EmergencyContacts";
-// import LocationReminder from "../components/LocationReminder";
 import translations from '../components/translations';
+import AlertSystem from "../components/AlertSystem";
 
 const MobileContent = () => {
     const [isVisualReminderEnabled, setIsVisualReminderEnabled] = useState(() => {
@@ -75,6 +73,7 @@ const MobileContent = () => {
     };
 
     const t = translations[selectedLanguage];
+    const formattedExplanation = t.usageExplanation.replace(/\n/g, '<br>');
     return (
         <div className={`mobile-container ${isDarkMode ? 'dark-mode' : ''}`}>
             <div className="mobile-home">
@@ -89,7 +88,7 @@ const MobileContent = () => {
                 <FontAwesomeIcon icon={faStar} size="1x" style={{color: "#ffffff"}}/>
                 <div className={`mobile-curved-background ${isDarkMode ? 'dark-mode' : ''}`}>
                     <div className="mobile-logo-container">
-                        <img src={logo} alt="KidiSafe-logo" className="mobile-main-img"/>
+                      <AlertSystem/>
                         <ExplainMessage/>
                     </div>
                     <h1>{t.appName}</h1>
@@ -123,7 +122,7 @@ const MobileContent = () => {
                     <div className="popup-content">
                         <span className="close-button" onClick={toggleInfoPopup}>&times;</span>
                         <h2>{t.usageInstructions}</h2>
-                        <p>{t.usageExplanation}</p>
+                        <p dangerouslySetInnerHTML={{__html: formattedExplanation}}/>
                     </div>
                 </div>
             )}
@@ -165,6 +164,7 @@ const MobileContent = () => {
                             <div className="accordion-item">
                                 <div className="accordion-title" onClick={() => toggleSetting('languageSelection')}>
                                     <span>{t.languageSelection}</span>
+
                                     <FontAwesomeIcon
                                         icon={openSetting === 'languageSelection' ? 'faChevronUp' : 'faChevronDown'}/>
                                     <div className="accordion-content">
@@ -174,32 +174,6 @@ const MobileContent = () => {
                                         </select>
                                     </div>
                                 </div>
-                            </div>
-{/*                            <div className="accordion-item">*/}
-{/*                                <div className="accordion-title" onClick={() => toggleSetting('locationReminder')}>*/}
-{/*                                    <span>*/}
-{/*{t.locationReminder}<FontAwesomeIcon icon={faAngleDown} style={{fontSize: '26px'}}/></span>*/}
-{/*                                    <FontAwesomeIcon*/}
-{/*                                        icon={openSetting === 'locationReminder' ? 'faChevronUp' : 'faChevronDown'}/>*/}
-{/*                                </div>*/}
-{/*                                {openSetting === 'locationReminder' && (*/}
-{/*                                    <div className="accordion-content">*/}
-{/*                                        <LocationReminder/>*/}
-{/*                                    </div>*/}
-{/*                                )}*/}
-{/*                            </div>*/}
-                            <div className="accordion-item">
-                                <div className="accordion-title" onClick={() => toggleSetting('emergencyContacts')}>
-                                    <span>{t.emergencyContacts} <FontAwesomeIcon icon={faAngleDown}
-                                                                                 style={{fontSize: '26px'}}/></span>
-                                    <FontAwesomeIcon
-                                        icon={openSetting === 'emergencyContacts' ? 'faChevronUp' : 'faChevronDown'}/>
-                                </div>
-                                {openSetting === 'emergencyContacts' && (
-                                    <div className="accordion-content">
-                                        <EmergencyContacts/>
-                                    </div>
-                                )}
                             </div>
                         </div>
                     </div>
