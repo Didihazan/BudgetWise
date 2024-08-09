@@ -60,6 +60,7 @@
 .mobile-logo-container {
     margin: 0 auto;
     padding: 0;
+    /*margin-left: 53px;*/
     cursor: pointer;
     display: table;
     transition: box-shadow 0.3s ease;
@@ -70,6 +71,7 @@
     height: auto;
     display: block;
     margin: 0 auto;
+    margin-left: 30px;
 }
 
 .mobile-main-img {
