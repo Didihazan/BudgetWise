@@ -26,7 +26,7 @@ const AlertSystem = () => {
     }, [isActive]);
 
     const sendNotification = () => {
-        toast.warning("Your child is in the car, don't forget them!", {
+        toast.warning("הילד שלך ברכב, אל תשכח/י אותו!", {
             position: "top-center",
             autoClose: false,
             hideProgressBar: true,

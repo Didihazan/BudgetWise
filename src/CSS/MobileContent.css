@@ -79,8 +79,7 @@
     animation: float 2s ease-in-out infinite;
 }
 .mobile-logo-container.active {
-    box-shadow: 0 0 10px 5px green; /* ערך זה שולט בעובי הזוהר */
-    border-radius: 50%; /* ערך זה שולט בעיגול המלא של התמונה */
+   filter:drop-shadow(9px 18px 25px green) ;
 }
 
 /* הודעה להסברת "הפעל מצב נסיעה" */

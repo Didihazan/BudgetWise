@@ -3,7 +3,7 @@ const translations = {
         appName: 'KidiSafe',
         travelTimes: 'התאם זמני נסיעה',
         instructions: 'הוראות שימוש',
-        customization: 'התאמה אישית',
+        customization: 'הגדרות',
         usageInstructions: 'הוראות שימוש',
         usageExplanation: 'תודה שבחרת להשתמש ב-KidiSafe!<br><br>' +
             'להלן הוראות השימוש:<br>' +
@@ -29,7 +29,7 @@ const translations = {
         appName: 'KidiSafe',
         travelTimes: 'Adjust Travel Times',
         instructions: 'Usage Instructions',
-        customization: 'Customization',
+        customization: 'Setting',
         usageInstructions: 'Usage Instructions',
         usageExplanation: '!Thank you for choosing to use KidiSafe<br><br>' +
             'Here are the usage instructions:<br>' +
