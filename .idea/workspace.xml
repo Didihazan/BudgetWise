@@ -5,10 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
+      <change beforePath="$PROJECT_DIR$/.idea/KidiSafe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BudgetWise.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CSS/MobileContent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/CSS/MobileContent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AlertSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AlertSystem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/translations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/translations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/AlertSystem.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/DesktopContent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/EmergencyContacts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/LocationReminder.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/MobileContent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CSS/Star.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fonts/Gan CLM Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fonts/VAG Rounded Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AlertSystem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EmergencyContacts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExplainMessage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LocationReminder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RandomStars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Star.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/translations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/DesktopContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MobileContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorkerRegistration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/apiService.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +52,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -43,7 +77,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/didih/Desktop/KidiSafe App",
+    "last_opened_file_path": "C:/Users/didih/Desktop/Studies/Private studies/BudgetWise",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -51,18 +85,20 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\didih\Desktop\KidiSafe\src" />
       <recent name="C:\Users\didih\Desktop\KidiSafe\src\CSS" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+      <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="start" />
       <node-interpreter value="project" />
       <envs />
@@ -89,7 +125,18 @@
       <workItem from="1723050346356" duration="12293000" />
       <workItem from="1723131728778" duration="5421000" />
       <workItem from="1723199594006" duration="925000" />
-      <workItem from="1723537876998" duration="5361000" />
+      <workItem from="1723537876998" duration="6095000" />
+      <workItem from="1723551311394" duration="11000" />
+      <workItem from="1723552220194" duration="2954000" />
+      <workItem from="1723620207338" duration="4431000" />
+      <workItem from="1723632202815" duration="1829000" />
+      <workItem from="1723798309360" duration="215000" />
+      <workItem from="1724402897575" duration="17000" />
+      <workItem from="1724402926839" duration="3000" />
+      <workItem from="1734863624511" duration="1555000" />
+      <workItem from="1734934469998" duration="15000" />
+      <workItem from="1738306579176" duration="951000" />
+      <workItem from="1738307613721" duration="85000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -179,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723199881509</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update files">
+      <option name="closed" value="true" />
+      <created>1723547337996</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723547337996</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
