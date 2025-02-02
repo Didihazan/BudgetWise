@@ -1,12 +1,12 @@
 {
   "name": "server",
-  "version": "1.0.0",
-  "description": "server for React project",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "build": "echo 'No build step for server'"
-  },
+"version": "1.0.0",
+"description": "server for React project",
+"main": "app.js",
+"scripts": {
+"start": "node app.js",
+"dev": "nodemon app.js"
+},
 
   "keywords": [
     "keywords:",
