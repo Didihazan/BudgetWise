@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-export const API_URL = 'http://localhost:3000/api';
+export const API_URL =
+    process.env.NODE_ENV === 'production'
+        ? 'https://budgetwise-server.onrender.com/api'
+        : 'https://budgetwise-server.onrender.com/api'
+
+
+// export const API_URL = 'http://localhost:3000/api';
+
 export const TOKEN_KEY = 'token';
 axios.defaults.withCredentials = true;
 export const loginTimeStandard = 1000 * 60 * 60 * 24 * 7; // 7 days
