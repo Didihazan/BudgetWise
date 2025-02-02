@@ -5,14 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'gan': ['Gan CLM Bold', 'sans-serif'],
-        'vag': ['VAG Rounded Bold', 'sans-serif'],
+      screens: {
+        'nav-break': '900px',
       },
-      backgroundImage: {
-        'radial-gradient': 'radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent)',
+      fontFamily: {
+        'heebo': ['Heebo', 'sans-serif'],
       },
     },
-  },
-  plugins: [],
+    plugins: [],
+  }
 }
