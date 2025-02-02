@@ -16,6 +16,10 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get('/api', (req, res) => {
+    res.json({ message: 'API is working!' });
+});
+
 // בדיקת בריאות השרת
 app.get('/health', (req, res) => {
     res.status(200).json({ status: 'ok' });
