@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Plus, TrendingUp, TrendingDown, DollarSign, Calendar } from 'lucide-react';
 import { homeService } from "../services/homeService";
 import TransactionModal from "./TransactionModal";
+import TransactionsList from "../components/TransactionsList";
+import MonthlyComparisonModal from "../components/MonthlyComparisonModal";
 
 const Home = () => {
     const [content, setContent] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedPeriod, setSelectedPeriod] = useState('month');
+    const [selectedTransactionType, setSelectedTransactionType] = useState(null);
+    const [transactions, setTransactions] = useState([]);
+    const [isComparisonOpen, setIsComparisonOpen] = useState(false);
+
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -43,8 +49,17 @@ const Home = () => {
         { id: 'year', label: 'שנה' }
     ];
 
+    const handleTransactionTypeClick = async (type) => {
+        try {
+            const data = await homeService.getTransactionsByType(type);
+            setTransactions(data);
+            setSelectedTransactionType(type);
+        } catch (error) {
+            console.error('Failed to fetch transactions:', error);
+        }
+    };
     return (
-        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-4 rtl">
+        <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white p-4" dir="rtl">
             {/* כותרת ראשית */}
             <div className="text-center mb-8 pt-4">
                 <h1 className="text-3xl font-bold text-blue-900 mb-2">ברוכים הבאים לחכם פיננסי</h1>
@@ -71,7 +86,10 @@ const Home = () => {
             {/* כרטיסי סיכום */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 {/* הכנסות */}
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div
+                    onClick={() => handleTransactionTypeClick('income')}
+                    className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                >
                     <div className="flex items-center justify-between mb-4">
                         <div className="bg-green-100 p-3 rounded-full">
                             <TrendingUp className="w-6 h-6 text-green-600"/>
@@ -84,7 +102,10 @@ const Home = () => {
                 </div>
 
                 {/* הוצאות */}
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div
+                    onClick={() => handleTransactionTypeClick('expenses')}
+                    className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+                >
                     <div className="flex items-center justify-between mb-4">
                         <div className="bg-red-100 p-3 rounded-full">
                             <TrendingDown className="w-6 h-6 text-red-600"/>
@@ -111,15 +132,18 @@ const Home = () => {
             </div>
 
             {/* קישורים מהירים */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-
+            <div className="flex justify-center mb-8">
                 <button
-                    className="flex items-center justify-center gap-2 bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors">
+                    onClick={() => setIsComparisonOpen(true)}
+                    className="w-full max-w-[280px] md:max-w-[320px] flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 rounded-xl transition-all shadow hover:shadow-lg hover:from-blue-700 hover:to-blue-800 active:scale-[0.98]">
                     <Calendar className="w-5 h-5"/>
-                    <span>השוואה חודשית</span>
+                    <span className="text-base md:text-lg font-medium">השוואה חודשית</span>
                 </button>
             </div>
-
+            <MonthlyComparisonModal
+                isOpen={isComparisonOpen}
+                onClose={() => setIsComparisonOpen(false)}
+            />
             {/* כפתור הוספה */}
             <button
                 onClick={() => setIsModalOpen(true)}
@@ -133,6 +157,21 @@ const Home = () => {
                 onClose={() => setIsModalOpen(false)}
                 onSubmit={handleTransactionSubmit}
             />
+            {selectedTransactionType && (
+                <TransactionsList
+                    transactions={transactions}
+                    type={selectedTransactionType}
+                    onClose={() => setSelectedTransactionType(null)}
+                    onTransactionChange={() => {
+                        handleTransactionTypeClick(selectedTransactionType);
+                        const fetchContent = async () => {
+                            const data = await homeService.getHomeContent(selectedPeriod);
+                            setContent(data);
+                        };
+                        fetchContent();
+                    }}
+                />
+            )}
         </div>
     );
 };

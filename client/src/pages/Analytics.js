@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { analyticsService } from '../services/analyticsService';
+import React, {useEffect, useState} from 'react';
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
+import {analyticsService} from '../services/analyticsService';
 import ExpensesDistribution from "../components/ExpensesDistribution";
+import SavingGoals from "../components/SavingGoals";
 
 const Analytics = () => {
     const [data, setData] = useState([]);
@@ -34,7 +35,7 @@ const Analytics = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-16" dir="rtl">
             <h1 className="text-2xl font-bold mb-6">ניתוח פיננסי</h1>
 
             <div className="bg-white rounded-lg shadow p-4 mb-6">
@@ -74,7 +75,7 @@ const Analytics = () => {
                 <ExpensesDistribution/>
                 <div className="bg-white rounded-lg shadow p-4">
                     <h2 className="text-lg font-semibold mb-4">יעדי חיסכון</h2>
-                    {/* כאן יבוא תרשים מדדים */}
+                    <SavingGoals/>
                 </div>
             </div>
         </div>

@@ -118,4 +118,98 @@ router.get('/expenses-distribution', async (req, res) => {
     }
 });
 
+// routes/analyticsRoutes.js
+
+router.get('/saving-tips', async (req, res) => {
+    try {
+        const threeMonthsAgo = new Date();
+        threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+
+        // מביא את סך ההכנסות וההוצאות בחודש האחרון
+        const monthlyTotals = await Transaction.aggregate([
+            {
+                $match: {
+                    date: { $gte: threeMonthsAgo }
+                }
+            },
+            {
+                $group: {
+                    _id: '$type',
+                    total: { $sum: '$amount' }
+                }
+            }
+        ]);
+
+        // חישוב המאזן הכולל
+        const totalExpenses = monthlyTotals.find(t => t._id === 'expenses')?.total || 0;
+        const totalIncome = monthlyTotals.find(t => t._id === 'income')?.total || 0;
+        const balance = totalIncome - totalExpenses;
+
+        // מביא את ההוצאות לפי קטגוריות
+        const categoryExpenses = await Transaction.aggregate([
+            {
+                $match: {
+                    type: 'expenses',
+                    date: { $gte: threeMonthsAgo }
+                }
+            },
+            {
+                $group: {
+                    _id: '$category',
+                    total: { $sum: '$amount' },
+                    count: { $sum: 1 },
+                    avgAmount: { $avg: '$amount' }
+                }
+            },
+            {
+                $sort: { total: -1 }
+            }
+        ]);
+
+        // הכנת התגובה
+        const response = {
+            isOverspending: balance < 0,
+            balance,
+            totalExpenses,
+            totalIncome,
+            savingTips: categoryExpenses.map(category => {
+                const monthlyAvg = category.total / 3; // ממוצע חודשי
+                let tip = '';
+
+                switch(category._id) {
+                    case 'food':
+                        tip = monthlyAvg > totalIncome * 0.3 ?
+                            'הוצאות המזון שלך גבוהות מהמומלץ (30% מההכנסה). נסו לתכנן קניות מראש ולהשתמש ברשימת קניות.' :
+                            'נסו לצמצם קניות ספונטניות ולהעדיף קניות מרוכזות.';
+                        break;
+                    case 'transport':
+                        tip = monthlyAvg > totalIncome * 0.15 ?
+                            'הוצאות התחבורה גבוהות מהמומלץ. שקלו שימוש בתחבורה ציבורית או שיתוף נסיעות.' :
+                            'בדקו אפשרויות לנסיעות משותפות או מנוי חודשי לתחבורה ציבורית.';
+                        break;
+                    case 'entertainment':
+                        tip = monthlyAvg > totalIncome * 0.1 ?
+                            'הוצאות הבילויים גבוהות יחסית. חפשו פעילויות מהנות בעלות נמוכה.' :
+                            'נסו למצוא פעילויות פנאי חינמיות או במחיר מוזל.';
+                        break;
+                    default:
+                        tip = 'נסו לעקוב אחר ההוצאות בקטגוריה זו ולזהות דפוסי הוצאה מיותרים.';
+                }
+
+                return {
+                    category: category._id,
+                    monthlyAvg,
+                    total: category.total,
+                    count: category.count,
+                    tip,
+                    percentageOfIncome: (monthlyAvg / totalIncome * 100).toFixed(1)
+                };
+            })
+        };
+
+        res.json(response);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
 module.exports = router;

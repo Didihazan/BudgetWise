@@ -1,12 +1,17 @@
-// services/homeService.js
-import {API_URL} from "./apiService";
+import { API_URL, doApiGet, doApiMethod } from "./apiService";
 
 export const homeService = {
-    async getHomeContent() {
+    async getHomeContent(period = 'month') {
         try {
-            const response = await fetch(`${API_URL}/transactions/summary`);
-            if (!response.ok) throw new Error('Network response was not ok');
-            return await response.json();
+            return await doApiGet(`${API_URL}/transactions/summary?period=${period}`);
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    async getTransactionsByType(type) {
+        try {
+            return await doApiGet(`${API_URL}/transactions?type=${type}`);
         } catch (error) {
             throw error;
         }
@@ -14,24 +19,24 @@ export const homeService = {
 
     async addTransaction(transaction) {
         try {
-            console.log('שולח עסקה:', transaction);
-
-            const response = await fetch(`${API_URL}/transactions`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(transaction),
-            });
-
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.message || 'שגיאה בהוספת העסקה');
-            }
-
-            return await response.json();
+            return await doApiMethod(`${API_URL}/transactions`, 'POST', transaction);
         } catch (error) {
-            console.error('שגיאה בשירות:', error);
+            throw error;
+        }
+    },
+
+    async updateTransaction(id, transaction) {
+        try {
+            return await doApiMethod(`${API_URL}/transactions/${id}`, 'PUT', transaction);
+        } catch (error) {
+            throw error;
+        }
+    },
+
+    async deleteTransaction(id) {
+        try {
+            return await doApiMethod(`${API_URL}/transactions/${id}`, 'DELETE');
+        } catch (error) {
             throw error;
         }
     }

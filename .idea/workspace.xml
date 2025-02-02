@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
+      <change afterPath="$PROJECT_DIR$/client/src/components/MonthlyComparisonModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/SavingGoals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/TransactionsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.3e9b9c30.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/static/css/main.3e9b9c30.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Analytics.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Analytics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/TransactionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/TransactionModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/analyticsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/analyticsService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/apiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/apiService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/homeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/homeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/analyticsRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/analyticsRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/routes/transactionRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/transactionRoutes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +126,8 @@
       <workItem from="1734934469998" duration="15000" />
       <workItem from="1738306579176" duration="951000" />
       <workItem from="1738307613721" duration="7094000" />
-      <workItem from="1738476097981" duration="16066000" />
+      <workItem from="1738476097981" duration="16105000" />
+      <workItem from="1738497537752" duration="5045000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -296,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738492218614</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update files">
+      <option name="closed" value="true" />
+      <created>1738493490706</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1738493490706</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
