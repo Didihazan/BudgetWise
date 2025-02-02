@@ -9,14 +9,7 @@ const connectDB = async () => {
             family: 4
         });
 
-        mongoose.connection.on('connected', () => {
-            console.log(`MongoDB התחבר בהצלחה: ${conn.connection.host}`);
-        });
-
-        mongoose.connection.on('error', (err) => {
-            console.error('MongoDB שגיאת התחברות:', err);
-        });
-
+        console.log('Connected to MongoDB Atlas');
         return conn;
     } catch (err) {
         console.error('שגיאה בהתחברות למונגו:', err);

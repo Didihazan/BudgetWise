@@ -1,6 +1,7 @@
 // models/Transaction.js
 const mongoose = require('mongoose');
 
+
 const transactionSchema = new mongoose.Schema({
     type: {
         type: String,
@@ -9,7 +10,8 @@ const transactionSchema = new mongoose.Schema({
     },
     amount: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     category: {
         type: String,
@@ -23,5 +25,5 @@ const transactionSchema = new mongoose.Schema({
 }, {
     timestamps: true
 });
-
+// models/Transaction.js
 module.exports = mongoose.model('Transaction', transactionSchema);

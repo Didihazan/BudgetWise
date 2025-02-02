@@ -112,11 +112,7 @@ const Home = () => {
 
             {/* קישורים מהירים */}
             <div className="grid grid-cols-2 gap-4 mb-8">
-                <button
-                    className="flex items-center justify-center gap-2 bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors">
-                    <PieChart className="w-5 h-5"/>
-                    <span>ניתוח הוצאות</span>
-                </button>
+
                 <button
                     className="flex items-center justify-center gap-2 bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors">
                     <Calendar className="w-5 h-5"/>

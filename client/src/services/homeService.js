@@ -14,6 +14,8 @@ export const homeService = {
 
     async addTransaction(transaction) {
         try {
+            console.log('שולח עסקה:', transaction);
+
             const response = await fetch(`${BASE_URL}/transactions`, {
                 method: 'POST',
                 headers: {
@@ -21,9 +23,15 @@ export const homeService = {
                 },
                 body: JSON.stringify(transaction),
             });
-            if (!response.ok) throw new Error('Network response was not ok');
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'שגיאה בהוספת העסקה');
+            }
+
             return await response.json();
         } catch (error) {
+            console.error('שגיאה בשירות:', error);
             throw error;
         }
     }
