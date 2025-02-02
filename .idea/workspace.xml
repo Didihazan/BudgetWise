@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.3e9b9c30.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/static/css/main.3e9b9c30.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/analyticsService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/analyticsService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/apiService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/apiService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/homeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/homeService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +118,7 @@
       <workItem from="1734934469998" duration="15000" />
       <workItem from="1738306579176" duration="951000" />
       <workItem from="1738307613721" duration="7094000" />
-      <workItem from="1738476097981" duration="13688000" />
+      <workItem from="1738476097981" duration="16066000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -267,7 +272,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738490708692</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update files">
+      <option name="closed" value="true" />
+      <created>1738491011906</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1738491011906</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update files">
+      <option name="closed" value="true" />
+      <created>1738491655610</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1738491655610</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update files">
+      <option name="closed" value="true" />
+      <created>1738492218614</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1738492218614</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

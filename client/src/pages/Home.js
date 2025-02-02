@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Plus, TrendingUp, TrendingDown, DollarSign, PieChart, Calendar } from 'lucide-react';
+import { Plus, TrendingUp, TrendingDown, DollarSign, Calendar } from 'lucide-react';
 import { homeService } from "../services/homeService";
 import TransactionModal from "./TransactionModal";
 
