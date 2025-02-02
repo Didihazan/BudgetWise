@@ -4,8 +4,10 @@
   "description": "server for React project",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "build": "echo 'No build step for server'"
   },
+
   "keywords": [
     "keywords:",
     "admin",

@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dcb91b3a-506a-415b-b63d-73edf3b42631" name="Changes" comment="update files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/homeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/homeService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/Transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/models/Transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/transactionRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/routes/transactionRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,7 @@
       <workItem from="1734934469998" duration="15000" />
       <workItem from="1738306579176" duration="951000" />
       <workItem from="1738307613721" duration="7094000" />
-      <workItem from="1738476097981" duration="11538000" />
+      <workItem from="1738476097981" duration="12252000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <option name="closed" value="true" />
@@ -241,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738483505267</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update files">
+      <option name="closed" value="true" />
+      <created>1738488847223</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738488847223</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
